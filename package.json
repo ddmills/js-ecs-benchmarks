@@ -1,0 +1,18 @@
+{
+  "name": "js-ecs-benchmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules --es-module-specifier-resolution=node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddmills/js-ecs-benchmarks.git"
+  },
+  "dependencies": {
+    "geotic": "^4.1.0",
+    "microtime": "^3.0.0"
+  }
+}
