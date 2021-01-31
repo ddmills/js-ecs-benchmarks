@@ -1,6 +1,6 @@
 import { World, System, Component, TagComponent, Types } from 'ecsy';
 
-class Position extends Component {};
+class Position extends Component {}
 
 Position.schema = {
     x: {
@@ -10,7 +10,7 @@ Position.schema = {
     y: {
         type: Types.Number,
         default: 0,
-    }
+    },
 };
 
 class Velocity extends Component {}
@@ -23,7 +23,7 @@ Velocity.schema = {
     dy: {
         type: Types.Number,
         default: 1.7,
-    }
+    },
 };
 
 let updateCount = 0;
@@ -40,13 +40,13 @@ class MovementSystem extends System {
             updateCount++;
         });
     }
-};
+}
 
 MovementSystem.queries = {
     movement: {
-        components: [Velocity, Position]
-    }
-}
+        components: [Velocity, Position],
+    },
+};
 
 let i = 0;
 export default {
@@ -88,4 +88,3 @@ export default {
         return updateCount;
     },
 };
-

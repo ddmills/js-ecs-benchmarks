@@ -11,5 +11,5 @@ export default {
         ctx.addVelocityComponent(entity);
 
         ctx.updateMovementSystem();
-    }
+    },
 };

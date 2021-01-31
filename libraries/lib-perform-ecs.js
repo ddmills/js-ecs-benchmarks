@@ -1,4 +1,10 @@
-import { ECS, Component, makeComponent, System, EntityViewFactory } from 'perform-ecs';
+import {
+    ECS,
+    Component,
+    makeComponent,
+    System,
+    EntityViewFactory,
+} from 'perform-ecs';
 
 class Position extends Component {
     x = 0;
@@ -8,7 +14,7 @@ class Position extends Component {
         this.x = 0;
         this.y = 0;
     }
-};
+}
 class Velocity extends Component {
     dx = 1.2;
     dy = 1.7;
@@ -17,7 +23,7 @@ class Velocity extends Component {
         this.dx = 1.2;
         this.dy = 1.7;
     }
-};
+}
 
 makeComponent(Position);
 makeComponent(Velocity);
@@ -36,7 +42,7 @@ class MovementSystem extends System {
             this.updateCount++;
         });
     }
-};
+}
 
 export default {
     name: 'perform-ecs',
@@ -49,7 +55,10 @@ export default {
     createEntity() {
         // for some reason, perform-ecs isn't picking up new entites
         // when these components are added later, so we add them now instead.
-        return this.ecs.createEntity([{ component: Position }, { component: Velocity }]);
+        return this.ecs.createEntity([
+            { component: Position },
+            { component: Velocity },
+        ]);
     },
     addPositionComponent(entity) {
         // this doesn't seem to update in the system

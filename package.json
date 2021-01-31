@@ -1,24 +1,28 @@
 {
-  "name": "js-ecs-benchmarks",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "node --experimental-modules --es-module-specifier-resolution=node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ddmills/js-ecs-benchmarks.git"
-  },
-  "dependencies": {
-    "ape-ecs": "^1.3.0",
-    "ecsy": "^0.4.2",
-    "geotic": "^4.1.0",
-    "geotic-legacy": "^3.5.5",
-    "microtime": "^3.0.0",
-    "nano-ecs": "^2.4.0",
-    "perform-ecs": "^0.7.8",
-    "tiny-ecs": "^2.0.0"
-  }
+    "name": "js-ecs-benchmarks",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node --experimental-modules --es-module-specifier-resolution=node index.js",
+        "pretty": "prettier --write ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ddmills/js-ecs-benchmarks.git"
+    },
+    "dependencies": {
+        "ape-ecs": "^1.3.0",
+        "ecsy": "^0.4.2",
+        "geotic": "^4.1.0",
+        "geotic-legacy": "^3.5.5",
+        "microtime": "^3.0.0",
+        "nano-ecs": "^2.4.0",
+        "perform-ecs": "^0.7.8",
+        "tiny-ecs": "^2.0.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.2.1"
+    }
 }

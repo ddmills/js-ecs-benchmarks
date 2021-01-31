@@ -9,5 +9,5 @@ export default {
 
         ctx.addPositionComponent(entity);
         ctx.addVelocityComponent(entity);
-    }
+    },
 };

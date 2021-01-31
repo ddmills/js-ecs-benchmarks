@@ -3,15 +3,15 @@ import { Engine, Component } from 'geotic';
 class Position extends Component {
     static properties = {
         x: 0,
-        y: 0
+        y: 0,
     };
-};
+}
 class Velocity extends Component {
     static properties = {
         dx: 1.2,
-        dy: 1.7
+        dy: 1.7,
     };
-};
+}
 
 const engine = new Engine();
 
@@ -34,7 +34,7 @@ class MovementSystem {
             this.updateCount++;
         });
     }
-};
+}
 
 export default {
     name: 'geotic (v4)',

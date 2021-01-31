@@ -3,12 +3,12 @@ import tiny from 'tiny-ecs';
 function Position() {
     this.x = 0;
     this.y = 0;
-};
+}
 
 function Velocity() {
     this.dx = 1.2;
     this.dy = 1.7;
-};
+}
 
 class MovementSystem {
     updateCount = 0;
@@ -24,7 +24,7 @@ class MovementSystem {
             this.updateCount++;
         });
     }
-};
+}
 
 export default {
     name: 'tiny-ecs',

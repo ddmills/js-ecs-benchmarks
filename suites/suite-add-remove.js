@@ -12,5 +12,5 @@ export default {
 
         ctx.removePositionComponent(entity);
         ctx.removeVelocityComponent(entity);
-    }
+    },
 };

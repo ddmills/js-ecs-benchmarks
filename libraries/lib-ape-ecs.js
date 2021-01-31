@@ -3,21 +3,23 @@ import ApeECS from 'ape-ecs';
 class Position extends ApeECS.Component {
     static properties = {
         x: 0,
-        y: 0
+        y: 0,
     };
-};
+}
 class Velocity extends ApeECS.Component {
     static properties = {
         dx: 1.2,
-        dy: 1.7
+        dy: 1.7,
     };
-};
+}
 
 let updateCount = 0;
 
 class MovementSystem extends ApeECS.System {
     init() {
-        this.query = this.createQuery().fromAll('Position', 'Velocity').persist();
+        this.query = this.createQuery()
+            .fromAll('Position', 'Velocity')
+            .persist();
     }
 
     update() {
@@ -32,7 +34,7 @@ class MovementSystem extends ApeECS.System {
             updateCount++;
         });
     }
-};
+}
 
 export default {
     name: 'ape-ecs',
