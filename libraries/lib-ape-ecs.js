@@ -6,6 +6,7 @@ class Position extends ApeECS.Component {
         y: 0,
     };
 }
+
 class Velocity extends ApeECS.Component {
     static properties = {
         dx: 1.2,
@@ -57,10 +58,10 @@ export default {
         entity.addComponent({ type: 'Velocity' });
     },
     removePositionComponent(entity) {
-        entity.removeComponent('Position');
+        entity.removeComponent(entity.getOne('Position'));
     },
     removeVelocityComponent(entity) {
-        entity.removeComponent('Velocity');
+        entity.removeComponent(entity.getOne('Velocity'));
     },
     destroyEntity(entity) {
         entity.destroy();
@@ -69,6 +70,8 @@ export default {
         this.world = null;
     },
     updateMovementSystem() {
+        // this.world.tick();
+        // this.world.updateIndexes();
         this.world.runSystems('movement');
     },
     geMovementSystemUpdateCount() {
