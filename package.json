@@ -18,6 +18,7 @@
     "geotic-legacy": "^3.5.5",
     "microtime": "^3.0.0",
     "nano-ecs": "^2.4.0",
-    "perform-ecs": "^0.7.8"
+    "perform-ecs": "^0.7.8",
+    "tiny-ecs": "^2.0.0"
   }
 }
