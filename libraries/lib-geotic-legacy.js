@@ -1,4 +1,4 @@
-import { Engine, Component } from 'geotic';
+import { Engine, Component } from 'geotic-legacy';
 
 class Position extends Component {
     static properties = {
@@ -13,16 +13,11 @@ class Velocity extends Component {
     };
 };
 
-const engine = new Engine();
-
-engine.registerComponent(Position);
-engine.registerComponent(Velocity);
-
 class MovementSystem {
     updateCount = 0;
 
-    constructor(world) {
-        this.query = world.createQuery({
+    constructor(engine) {
+        this.query = engine.createQuery({
             all: [Position, Velocity],
         });
     }
@@ -37,14 +32,17 @@ class MovementSystem {
 };
 
 export default {
-    name: 'geotic (v4)',
+    name: 'geotic (v3)',
     setup() {
-        this.world = engine.createWorld();
+        this.engine = new Engine();
 
-        this.movementSystem = new MovementSystem(this.world);
+        this.engine.registerComponent(Position);
+        this.engine.registerComponent(Velocity);
+
+        this.movementSystem = new MovementSystem(this.engine);
     },
     createEntity() {
-        return this.world.createEntity();
+        return this.engine.createEntity();
     },
     addPositionComponent(entity) {
         entity.add(Position);
@@ -62,8 +60,7 @@ export default {
         entity.destroy();
     },
     cleanup() {
-        this.world.destroy();
-        this.world = null;
+        this.engine = null;
     },
     updateMovementSystem() {
         this.movementSystem.update();

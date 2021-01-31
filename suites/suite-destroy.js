@@ -1,6 +1,6 @@
 export default {
     name: 'Destroy',
-    iterations: 10000,
+    iterations: 100000,
     setup(ctx) {
         ctx.setup();
     },

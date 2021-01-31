@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "ape-ecs": "^1.3.0",
+    "ecsy": "^0.4.2",
     "geotic": "^4.1.0",
+    "geotic-legacy": "^3.5.5",
     "microtime": "^3.0.0",
     "perform-ecs": "^0.7.8"
   }
