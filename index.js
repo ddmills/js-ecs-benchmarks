@@ -1,5 +1,7 @@
 import * as libs from './libraries';
 import * as suts from './suites';
+import elegantSpinner from 'elegant-spinner';
+import logUpdate from 'log-update';
 
 const libraries = Object.values(libs);
 const suites = Object.values(suts);
@@ -10,10 +12,12 @@ const now = () => {
     return (hr[0] * 1e9 + hr[1]) / 1000;
 };
 
+const frame = elegantSpinner();
+
 suites.forEach((suite) => {
     const output = [];
 
-    libraries.forEach((library) => {
+    libraries.forEach((library, libIdx) => {
         suite.setup(library);
 
         let sum = 0;
@@ -24,6 +28,17 @@ suites.forEach((suite) => {
             suite.perform(library);
 
             sum += now() - start;
+
+            if (i % 200 === 0) {
+                const progress = (i / suite.iterations) * 100;
+                const lib = `${libIdx}/${libraries.length}`;
+
+                logUpdate(
+                    `${frame()} ${suite.name} - ${lib} ${
+                        library.name
+                    } ${progress.toFixed(0)}%`
+                );
+            }
         }
 
         const updates = library.geMovementSystemUpdateCount();
@@ -36,6 +51,8 @@ suites.forEach((suite) => {
 
         library.cleanup();
     });
+
+    logUpdate.clear();
 
     output.sort((o1, o2) => o1.sum - o2.sum);
 
@@ -61,13 +78,6 @@ suites.forEach((suite) => {
         console.log(
             `  - ${nameTxt}${avgText}${sumTxt}${updateText}${percentText}`
         );
-
-        // const updates = library.geMovementSystemUpdateCount();
-        // const updateText = updates > 0 ? `\t${updates} entity updates` : '';
-
-        // console.log(
-        //     `  - ${library.name}\t\t${avgText}ms\t${sumText}ms${updateText}`
-        // );
     });
     console.log('');
 });

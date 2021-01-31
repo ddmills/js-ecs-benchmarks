@@ -1,6 +1,6 @@
 export default {
     name: 'Velocity',
-    iterations: 1000,
+    iterations: 2000,
     setup(ctx) {
         ctx.setup();
     },

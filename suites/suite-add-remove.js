@@ -1,25 +1,25 @@
 export default {
     name: 'Add/Remove',
-    iterations: 1000,
+    iterations: 5000,
     setup(ctx) {
         ctx.setup();
     },
     perform(ctx) {
-        const entity = ctx.createEntity();
+        const entity1 = ctx.createEntity();
+        const entity2 = ctx.createEntity();
 
-        ctx.addPositionComponent(entity);
-        ctx.addVelocityComponent(entity);
+        ctx.addPositionComponent(entity1);
+        ctx.addVelocityComponent(entity1);
 
-        ctx.updateMovementSystem();
-
-        ctx.removePositionComponent(entity);
-
-        ctx.updateMovementSystem();
-
-        ctx.removeVelocityComponent(entity);
+        ctx.addPositionComponent(entity2);
+        ctx.addVelocityComponent(entity2);
 
         ctx.updateMovementSystem();
 
-        ctx.destroyEntity(entity);
+        ctx.removePositionComponent(entity1);
+
+        ctx.updateMovementSystem();
+
+        ctx.destroyEntity(entity1);
     },
 };
