@@ -27,8 +27,8 @@ class MovementSystem {
 
     update() {
         this.query.get().forEach((entity) => {
-            entity.x += entity.dx;
-            entity.y += entity.dy;
+            entity.position.x += entity.velocity.dx;
+            entity.position.y += entity.velocity.dy;
         });
     }
 };
