@@ -5,3 +5,4 @@ export { default as ApeEcsLibrary } from './lib-ape-ecs';
 export { default as EcsyLibrary } from './lib-ecsy';
 export { default as NanoEcsLibrary } from './lib-nano-ecs';
 export { default as TinyEcsLibrary } from './lib-tiny-ecs';
+export { default as YaglEcsLibrary } from './lib-yagl-ecs';

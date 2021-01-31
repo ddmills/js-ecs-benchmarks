@@ -17,10 +17,10 @@
         "ecsy": "^0.4.2",
         "geotic": "^4.1.0",
         "geotic-legacy": "^3.5.5",
-        "microtime": "^3.0.0",
         "nano-ecs": "^2.4.0",
         "perform-ecs": "^0.7.8",
-        "tiny-ecs": "^2.0.0"
+        "tiny-ecs": "^2.0.0",
+        "yagl-ecs": "^1.1.0"
     },
     "devDependencies": {
         "prettier": "^2.2.1"
