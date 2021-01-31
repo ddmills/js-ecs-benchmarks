@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "geotic": "^4.1.0",
-    "microtime": "^3.0.0"
+    "microtime": "^3.0.0",
+    "perform-ecs": "^0.7.8"
   }
 }

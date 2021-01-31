@@ -25,7 +25,7 @@ suites.forEach((suite) => {
 
         library.cleanup();
 
-        console.log(`  - ${library.name} ${sum}ms (${avg.toFixed(0)}ms/iteration)`);
+        console.log(`  - ${library.name}\t${sum}ms (${avg.toFixed(0)}ms/iteration)`);
     });
 
     console.log('');

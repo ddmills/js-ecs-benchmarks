@@ -18,14 +18,27 @@ const engine = new Engine();
 engine.registerComponent(Position);
 engine.registerComponent(Velocity);
 
+class MovementSystem {
+    constructor(world) {
+        this.query = world.createQuery({
+            all: [Position, Velocity],
+        });
+    }
+
+    update() {
+        this.query.get().forEach((entity) => {
+            entity.x += entity.dx;
+            entity.y += entity.dy;
+        });
+    }
+};
+
 export default {
     name: 'geotic',
     setup() {
         this.world = engine.createWorld();
 
-        this.movementQuery = this.world.createQuery({
-            all: [Position, Velocity],
-        });
+        this.movementSystem = new MovementSystem(this.world);
     },
     createEntity() {
         return this.world.createEntity();
@@ -50,9 +63,6 @@ export default {
         this.world = null;
     },
     updateMovementSystem() {
-        this.movementQuery.get().forEach((entity) => {
-            entity.position.x += entity.velocity.dx;
-            entity.position.y += entity.velocity.dy;
-        });
+        this.movementSystem.update();
     }
 };
