@@ -19,6 +19,8 @@ engine.registerComponent(Position);
 engine.registerComponent(Velocity);
 
 class MovementSystem {
+    updateCount = 0;
+
     constructor(world) {
         this.query = world.createQuery({
             all: [Position, Velocity],
@@ -26,9 +28,10 @@ class MovementSystem {
     }
 
     update() {
-        this.query.get().forEach((entity) => {
+        Array.from(this.query.get()).forEach((entity) => {
             entity.position.x += entity.velocity.dx;
             entity.position.y += entity.velocity.dy;
+            this.updateCount++;
         });
     }
 };
@@ -64,5 +67,8 @@ export default {
     },
     updateMovementSystem() {
         this.movementSystem.update();
-    }
+    },
+    geMovementSystemUpdateCount() {
+        return this.movementSystem.updateCount;
+    },
 };

@@ -13,9 +13,11 @@ class Velocity extends ApeECS.Component {
     };
 };
 
+let updateCount = 0;
+
 class MovementSystem extends ApeECS.System {
     init() {
-        this.query = this.createQuery().fromAll('Position', 'Velocity');
+        this.query = this.createQuery().fromAll('Position', 'Velocity').persist();
     }
 
     update() {
@@ -27,6 +29,7 @@ class MovementSystem extends ApeECS.System {
             position.y += velocity.dy;
 
             position.update();
+            updateCount++;
         });
     }
 };
@@ -39,6 +42,7 @@ export default {
         this.world.registerComponent(Position);
         this.world.registerComponent(Velocity);
 
+        updateCount = 0;
         this.world.registerSystem('movement', MovementSystem);
     },
     createEntity() {
@@ -64,5 +68,8 @@ export default {
     },
     updateMovementSystem() {
         this.world.runSystems('movement');
-    }
+    },
+    geMovementSystemUpdateCount() {
+        return updateCount;
+    },
 };

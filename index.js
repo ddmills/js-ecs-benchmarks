@@ -25,7 +25,9 @@ suites.forEach((suite) => {
 
         library.cleanup();
 
-        console.log(`  - ${library.name}\t${sum}ms (${avg.toFixed(0)}ms/iteration)`);
+        const updates = library.geMovementSystemUpdateCount();
+
+        console.log(`  - ${library.name}\t${sum}ms (${avg.toFixed(0)}ms/iteration). ${updates} updates.`);
     });
 
     console.log('');

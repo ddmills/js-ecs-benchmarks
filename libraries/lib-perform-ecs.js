@@ -23,6 +23,8 @@ makeComponent(Position);
 makeComponent(Velocity);
 
 class MovementSystem extends System {
+    updateCount = 0;
+
     view = EntityViewFactory.createView({
         components: [Position, Velocity],
     });
@@ -31,6 +33,7 @@ class MovementSystem extends System {
         this.view.entities.forEach((entity) => {
             entity.x += entity.dx;
             entity.y += entity.dy;
+            this.updateCount++;
         });
     }
 };
@@ -70,5 +73,8 @@ export default {
     },
     updateMovementSystem() {
         this.ecs.update();
-    }
+    },
+    geMovementSystemUpdateCount() {
+        return this.movementSystem.updateCount;
+    },
 };
