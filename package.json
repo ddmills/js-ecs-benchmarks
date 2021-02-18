@@ -22,7 +22,8 @@
         "nano-ecs": "^2.4.0",
         "perform-ecs": "^0.7.8",
         "tiny-ecs": "^2.0.0",
-        "yagl-ecs": "^1.1.0"
+        "yagl-ecs": "^1.1.0",
+        "uecs": "0.1.7"
     },
     "devDependencies": {
         "prettier": "^2.2.1"
