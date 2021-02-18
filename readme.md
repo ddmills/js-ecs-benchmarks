@@ -6,38 +6,42 @@ Pull requests are welcome! This project uses `node v14.15.4`.
 
 ```
 Suite Add/Remove (5000 iterations)
-  - perform-ecs    181ms    906347ms  25010000 updates       0.0% fastest
-  - geotic (v4)    197ms    982705ms  25010000 updates       8.4% slower
-  - tiny-ecs       304ms   1518925ms  25010000 updates      67.6% slower
-  - nano-ecs       369ms   1845070ms  25010000 updates     103.6% slower
-  - yagl-ecs       495ms   2472841ms  25010000 updates     172.8% slower
-  - ape-ecs       1401ms   7006492ms  25010000 updates     673.0% slower
-  - geotic (v3)   5915ms  29574016ms  25010000 updates    3163.0% slower
+  - perform-ecs     64ms    318291ms  25010000 updates       0.0% fastest
+  - uecs            66ms    328546ms  25010000 updates       3.2% slower
+  - geotic (v4)     68ms    341473ms  25010000 updates       7.3% slower
+  - yagl-ecs       142ms    707538ms  25010000 updates     122.3% slower
+  - tiny-ecs       158ms    789408ms  25010000 updates     148.0% slower
+  - nano-ecs       193ms    965761ms  25010000 updates     203.4% slower
+  - ape-ecs        491ms   2456017ms  25010000 updates     671.6% slower
+  - geotic (v3)   2373ms  11864955ms  25010000 updates    3627.7% slower
 
 Suite Additions (100000 iterations)
-  - yagl-ecs         1ms     81113ms       0.0% fastest
-  - tiny-ecs         2ms    151974ms      87.4% slower
-  - nano-ecs         3ms    298216ms     267.7% slower
-  - perform-ecs      3ms    311515ms     284.1% slower
-  - geotic (v4)      4ms    364342ms     349.2% slower
-  - ape-ecs          8ms    799566ms     885.7% slower
-  - geotic (v3)     16ms   1634481ms    1915.1% slower
+  - yagl-ecs         1ms     75991ms       0.0% fastest
+  - tiny-ecs         1ms    133518ms      75.7% slower
+  - uecs             1ms    134372ms      76.8% slower
+  - nano-ecs         2ms    172218ms     126.6% slower
+  - perform-ecs      3ms    285350ms     275.5% slower
+  - geotic (v4)      3ms    301703ms     297.0% slower
+  - ape-ecs          5ms    525958ms     592.1% slower
+  - geotic (v3)     11ms   1105976ms    1355.4% slower
 
 Suite Destroy (100000 iterations)
-  - tiny-ecs         2ms    215069ms       0.0% fastest
-  - perform-ecs      3ms    312278ms      45.2% slower
-  - nano-ecs         4ms    421515ms      96.0% slower
-  - geotic (v4)      7ms    733938ms     241.3% slower
-  - ape-ecs          8ms    799019ms     271.5% slower
-  - geotic (v3)     28ms   2785019ms    1194.9% slower
-  - yagl-ecs        51ms   5052805ms    2249.4% slower
+  - tiny-ecs         2ms    183383ms       0.0% fastest
+  - uecs             2ms    187951ms       2.5% slower
+  - nano-ecs         3ms    252151ms      37.5% slower
+  - perform-ecs      3ms    264102ms      44.0% slower
+  - geotic (v4)      4ms    408021ms     122.5% slower
+  - ape-ecs          6ms    633429ms     245.4% slower
+  - geotic (v3)     13ms   1273478ms     594.4% slower
+  - yagl-ecs        28ms   2764251ms    1407.4% slower
 
 Suite Velocity (2000 iterations)
-  - geotic (v4)     27ms     53558ms 2001000 updates       0.0% fastest
-  - perform-ecs     35ms     69108ms 2001000 updates      29.0% slower
-  - yagl-ecs        54ms    108313ms 2001000 updates     102.2% slower
-  - tiny-ecs        59ms    117424ms 2001000 updates     119.2% slower
-  - nano-ecs        80ms    159768ms 2001000 updates     198.3% slower
-  - ape-ecs        329ms    657376ms 2001000 updates    1127.4% slower
-  - geotic (v3)    887ms   1773194ms 2001000 updates    3210.8% slower
+  - uecs            12ms     24330ms 2001000 updates       0.0% fastest
+  - perform-ecs     14ms     28039ms 2001000 updates      15.2% slower
+  - geotic (v4)     16ms     32880ms 2001000 updates      35.1% slower
+  - yagl-ecs        28ms     56370ms 2001000 updates     131.7% slower
+  - tiny-ecs        44ms     87638ms 2001000 updates     260.2% slower
+  - nano-ecs        54ms    107031ms 2001000 updates     339.9% slower
+  - ape-ecs        114ms    228994ms 2001000 updates     841.2% slower
+  - geotic (v3)    413ms    826396ms 2001000 updates    3296.6% slower
 ```
