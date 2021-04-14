@@ -1,5 +1,18 @@
 # JS ECS Benchmarks
 
+Includes:
+
+-   [Ape ECS](https://github.com/fritzy/ape-ecs)
+-   [bitECS](https://github.com/NateTheGreatt/bitECS)
+-   [ecsy](https://github.com/ecsyjs/ecsy)\*
+-   [fastecs](https://github.com/octavetoast/fastecs)
+-   [geotic](https://github.com/ddmills/geotic)
+-   [nano-ecs](https://github.com/noffle/nano-ecs)
+-   [perform-ecs](https://github.com/fireveined/perform-ecs)
+-   [tiny-ecs](https://github.com/bvalosek/tiny-ecs)
+-   [uecs](https://github.com/jprochazk/uecs)
+-   [yagl-ecs](https://github.com/yagl/ecs)
+
 Pull requests are welcome! This project uses `node v14.15.4`.
 
 **NOTE**: [ecsy](https://ecsy.io/) is included in this benchmarking suite, but it is EXTREMELY slow (tens of thousands of times slower) and it chokes on larger datasets. It can be included by uncommenting it from `/libraries/index.js`;
