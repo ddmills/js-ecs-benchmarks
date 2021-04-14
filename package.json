@@ -14,8 +14,10 @@
     },
     "dependencies": {
         "ape-ecs": "^1.3.0",
+        "bitecs": "^0.2.7",
         "ecsy": "^0.4.2",
         "elegant-spinner": "^2.0.0",
+        "fastecs": "^0.0.3",
         "geotic": "^4.1.0",
         "geotic-legacy": "^3.5.5",
         "log-update": "^4.0.0",
