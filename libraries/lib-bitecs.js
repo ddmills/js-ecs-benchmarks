@@ -31,6 +31,7 @@ export default {
                 const eid = ents[i]
                 this.Position.x[eid] += this.Velocity.x[eid]
                 this.Position.y[eid] += this.Velocity.y[eid]
+                updateCount++
             }
         })
           
