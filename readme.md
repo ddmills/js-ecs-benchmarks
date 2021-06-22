@@ -7,6 +7,7 @@ Includes:
 -   [ecsy](https://github.com/ecsyjs/ecsy)\*
 -   [fastecs](https://github.com/octavetoast/fastecs)
 -   [geotic](https://github.com/ddmills/geotic)
+-   [goodluck](https://github.com/piesku/goodluck)
 -   [nano-ecs](https://github.com/noffle/nano-ecs)
 -   [perform-ecs](https://github.com/fireveined/perform-ecs)
 -   [tiny-ecs](https://github.com/bvalosek/tiny-ecs)
