@@ -12,6 +12,7 @@ Includes:
 -   [perform-ecs](https://github.com/fireveined/perform-ecs)
 -   [tiny-ecs](https://github.com/bvalosek/tiny-ecs)
 -   [uecs](https://github.com/jprochazk/uecs)
+-   [wolf-ecs](https://github.com/EnderShadow8/wolf-ecs)
 -   [yagl-ecs](https://github.com/yagl/ecs)
 
 Pull requests are welcome! This project uses `node v14.15.4`.
