@@ -67,7 +67,7 @@ export default {
     updateMovementSystem() {
         this.ecs.update();
     },
-    geMovementSystemUpdateCount() {
+    getMovementSystemUpdateCount() {
         return this.movementSystem.updateCount;
     },
 };

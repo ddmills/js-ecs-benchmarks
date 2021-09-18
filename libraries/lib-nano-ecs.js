@@ -57,7 +57,7 @@ export default {
     updateMovementSystem() {
         this.movementSystem.update();
     },
-    geMovementSystemUpdateCount() {
+    getMovementSystemUpdateCount() {
         return this.movementSystem.updateCount;
     },
 };

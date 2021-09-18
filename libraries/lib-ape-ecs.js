@@ -74,7 +74,7 @@ export default {
         // this.world.updateIndexes();
         this.world.runSystems('movement');
     },
-    geMovementSystemUpdateCount() {
+    getMovementSystemUpdateCount() {
         return updateCount;
     },
 };

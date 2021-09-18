@@ -66,7 +66,7 @@ export default {
     updateMovementSystem() {
         sys_move(this.world);
     },
-    geMovementSystemUpdateCount() {
+    getMovementSystemUpdateCount() {
         return this.world.updateCount;
     },
 };

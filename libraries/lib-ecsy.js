@@ -84,7 +84,7 @@ export default {
     updateMovementSystem() {
         this.world.execute();
     },
-    geMovementSystemUpdateCount() {
+    getMovementSystemUpdateCount() {
         return updateCount;
     },
 };

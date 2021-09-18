@@ -41,7 +41,7 @@ suites.forEach((suite) => {
             }
         }
 
-        const updates = library.geMovementSystemUpdateCount();
+        const updates = library.getMovementSystemUpdateCount();
 
         output.push({
             library,

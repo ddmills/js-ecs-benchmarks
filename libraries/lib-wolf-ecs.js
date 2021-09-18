@@ -61,7 +61,7 @@ export default {
         this.sys();
     },
 
-    geMovementSystemUpdateCount() {
+    getMovementSystemUpdateCount() {
         return this.updateCount;
     },
 };
