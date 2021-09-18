@@ -21,54 +21,54 @@ Pull requests are welcome! This project uses `node v14.15.4`.
 
 ```
 Suite Add/Remove (5000 iterations)
-  - fastecs         10ms     48844ms   15000 updates       0.0% fastest
-  - bitecs          22ms    109934ms25010000 updates     125.1% slower
-  - uecs            50ms    250022ms25010000 updates     411.9% slower
-  - perform-ecs     57ms    283971ms25010000 updates     481.4% slower
-  - geotic (v4)     58ms    289210ms25010000 updates     492.1% slower
-  - yagl-ecs       244ms   1219993ms25010000 updates    2397.7% slower
-  - picoes         244ms   1222132ms25010000 updates    2402.1% slower
-  - tiny-ecs       299ms   1496981ms25010000 updates    2964.8% slower
-  - nano-ecs       377ms   1883442ms25010000 updates    3756.0% slower
-  - ape-ecs        687ms   3434138ms25010000 updates    6930.8% slower
-  - geotic (v3)   2372ms  11862145ms25010000 updates   24185.5% slower
+  - bitecs          28ms    141298ms    25010000 updates       0.0% fastest
+  - wolf-ecs        33ms    166274ms    25010000 updates      17.7% slower
+  - perform-ecs     57ms    283892ms    25010000 updates     100.9% slower
+  - uecs            63ms    314054ms    25010000 updates     122.3% slower
+  - geotic (v4)     94ms    468902ms    25010000 updates     231.9% slower
+  - goodluck        99ms    495523ms    25010000 updates     250.7% slower
+  - picoes         130ms    652380ms    25010000 updates     361.7% slower
+  - yagl-ecs       161ms    803422ms    25010000 updates     468.6% slower
+  - tiny-ecs       171ms    854570ms    25010000 updates     504.8% slower
+  - nano-ecs       226ms   1132089ms    25010000 updates     701.2% slower
+  - ape-ecs        491ms   2452598ms    25010000 updates    1635.8% slower
 
 Suite Additions (100000 iterations)
-  - bitecs           0ms     47258ms       0.0% fastest
-  - yagl-ecs         1ms     75380ms      59.5% slower
-  - uecs             2ms    165166ms     249.5% slower
-  - picoes           2ms    165343ms     249.9% slower
-  - tiny-ecs         2ms    197755ms     318.5% slower
-  - fastecs          2ms    201716ms     326.8% slower
-  - nano-ecs         2ms    224693ms     375.5% slower
-  - perform-ecs      3ms    307812ms     551.3% slower
-  - geotic (v4)      3ms    317151ms     571.1% slower
-  - ape-ecs          7ms    660099ms    1296.8% slower
-  - geotic (v3)     11ms   1054290ms    2130.9% slower
+  - goodluck         0ms     41138ms       0.0% fastest
+  - bitecs           1ms     73384ms      78.4% slower
+  - wolf-ecs         1ms     73985ms      79.8% slower
+  - yagl-ecs         1ms     83629ms     103.3% slower
+  - picoes           2ms    159775ms     288.4% slower
+  - uecs             2ms    209381ms     409.0% slower
+  - tiny-ecs         2ms    228498ms     455.4% slower
+  - nano-ecs         2ms    229034ms     456.7% slower
+  - geotic (v4)      3ms    301781ms     633.6% slower
+  - perform-ecs      4ms    399270ms     870.6% slower
+  - ape-ecs          6ms    559565ms    1260.2% slower
 
 Suite Destroy (100000 iterations)
-  - picoes           1ms    134809ms       0.0% fastest
-  - bitecs           2ms    152649ms      13.2% slower
-  - fastecs          2ms    181903ms      34.9% slower
-  - uecs             2ms    195484ms      45.0% slower
-  - tiny-ecs         2ms    238561ms      77.0% slower
-  - perform-ecs      3ms    320774ms     137.9% slower
-  - nano-ecs         3ms    322433ms     139.2% slower
-  - geotic (v4)      4ms    394016ms     192.3% slower
-  - ape-ecs          6ms    606267ms     349.7% slower
-  - geotic (v3)     12ms   1223034ms     807.2% slower
-  - yagl-ecs        25ms   2483086ms    1741.9% slower
+  - goodluck         0ms     26656ms       0.0% fastest
+  - wolf-ecs         1ms     67645ms     153.8% slower
+  - picoes           2ms    176077ms     560.5% slower
+  - bitecs           3ms    260038ms     875.5% slower
+  - uecs             3ms    277254ms     940.1% slower
+  - tiny-ecs         3ms    283539ms     963.7% slower
+  - nano-ecs         4ms    384070ms    1340.8% slower
+  - perform-ecs      4ms    394230ms    1378.9% slower
+  - geotic (v4)      7ms    705149ms    2545.3% slower
+  - ape-ecs          9ms    940972ms    3430.0% slower
+  - yagl-ecs        40ms   4020339ms   14982.1% slower
 
 Suite Velocity (2000 iterations)
-  - perform-ecs     11ms     22009ms 2001000 updates       0.0% fastest
-  - uecs            11ms     22214ms 2001000 updates       0.9% slower
-  - geotic (v4)     14ms     27102ms 2001000 updates      23.1% slower
-  - tiny-ecs        20ms     40449ms 2001000 updates      83.8% slower
-  - fastecs         23ms     45584ms 2001000 updates     107.1% slower
-  - bitecs          31ms     61922ms 2001000 updates     181.3% slower
-  - nano-ecs        31ms     62209ms 2001000 updates     182.6% slower
-  - picoes          43ms     85699ms 2001000 updates     289.4% slower
-  - yagl-ecs        48ms     96474ms 2001000 updates     338.3% slower
-  - ape-ecs        151ms    301849ms 2001000 updates    1271.4% slower
-  - geotic (v3)    379ms    758416ms 2001000 updates    3345.9% slower
+  - wolf-ecs         9ms     17441ms     2001000 updates       0.0% fastest
+  - uecs            15ms     29591ms     2001000 updates      69.7% slower
+  - perform-ecs     20ms     39400ms     2001000 updates     125.9% slower
+  - tiny-ecs        23ms     45760ms     2001000 updates     162.4% slower
+  - goodluck        23ms     45944ms     2001000 updates     163.4% slower
+  - bitecs          28ms     56635ms     2001000 updates     224.7% slower
+  - yagl-ecs        33ms     66710ms     2001000 updates     282.5% slower
+  - picoes          50ms    100712ms     2001000 updates     477.4% slower
+  - geotic (v4)     56ms    112415ms     2001000 updates     544.5% slower
+  - nano-ecs        62ms    124342ms     2001000 updates     612.9% slower
+  - ape-ecs        155ms    309112ms     2001000 updates    1672.3% slower
 ```

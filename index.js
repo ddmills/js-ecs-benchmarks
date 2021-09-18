@@ -65,7 +65,7 @@ suites.forEach((suite) => {
         const sumTxt = `${Math.round(out.sum)}`.padStart(10, ' ') + 'ms';
         const avgText = `${avg}`.padStart(6, ' ') + 'ms';
         const updateText =
-            out.updates > 0 ? `${out.updates} updates`.padStart(16) : '';
+            out.updates > 0 ? `${out.updates} updates`.padStart(20) : '';
 
         let percentText = percent.toFixed(1).padStart(10, ' ') + '%';
 
