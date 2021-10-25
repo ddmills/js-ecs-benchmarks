@@ -12,3 +12,4 @@ export { default as BitecsEcsLibrary } from './lib-bitecs';
 export { default as GoodluckLibrary } from './lib-goodluck';
 export { default as PicoesLibrary } from './lib-picoes';
 export { default as WolfEcsLibrary } from './lib-wolf-ecs';
+export { default as PiecsLibrary } from './lib-piecs';
