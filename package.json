@@ -21,6 +21,7 @@
         "geotic": "^4.1.0",
         "geotic-legacy": "^3.5.5",
         "goodluck": "^7.0.0",
+        "harmony-ecs": "^0.0.8",
         "log-update": "^4.0.0",
         "nano-ecs": "^2.4.0",
         "perform-ecs": "^0.7.8",
