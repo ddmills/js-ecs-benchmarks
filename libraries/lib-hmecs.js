@@ -14,7 +14,7 @@ const movementSystem = (world) => {
 
         /* Now apply the velocity to the position. */
         for (let i = 0; i < entities.length; i++) {
-            const { position, velocity } = entities[0]
+            const { position, velocity } = entities[i]
             position.x += velocity.x
             position.y += velocity.y
             position.z += velocity.z
