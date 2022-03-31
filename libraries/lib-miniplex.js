@@ -3,12 +3,12 @@ import { World } from 'miniplex';
 let updateCount = 0;
 
 const movementSystem = (world) => {
-    /* miniplex worlds expect us to register archetypes of entities that
-       have a specific set of components. */
-    const movingEntities = world.archetype('position', 'velocity');
+    let movingEntities;
 
     /* Return the system */
     return () => {
+        movingEntities ||= world.archetype('position', 'velocity');
+
         /* Get the index for the archetype we created earlier. */
         const { entities } = movingEntities;
         const len = entities.length;
