@@ -11,11 +11,9 @@ const movementSystem = (world) => {
 
         /* Get the index for the archetype we created earlier. */
         const { entities } = movingEntities;
-        const len = entities.length;
 
         /* Now apply the velocity to the position. */
-        for (let i = 0; i < len; i++) {
-            const { position, velocity } = entities[i];
+        for (const { position, velocity } of entities) {
             position.x += velocity.x;
             position.y += velocity.y;
             position.z += velocity.z;
