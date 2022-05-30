@@ -9,6 +9,7 @@ Includes:
 -   [geotic](https://github.com/ddmills/geotic)
 -   [goodluck](https://github.com/piesku/goodluck)
 -   [harmony-ecs](https://github.com/3mcd/harmony-ecs)
+-   [miniplex](https://github.com/hmans/miniplex)
 -   [nano-ecs](https://github.com/noffle/nano-ecs)
 -   [perform-ecs](https://github.com/fireveined/perform-ecs)
 -   [piecs](https://github.com/sondresj/piecs)
