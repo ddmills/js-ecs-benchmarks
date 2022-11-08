@@ -46,6 +46,7 @@ class MovementSystem extends System {
 
 export default {
     name: 'perform-ecs',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.ecs = new ECS();
         this.movementSystem = new MovementSystem();

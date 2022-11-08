@@ -38,6 +38,7 @@ class MovementSystem {
 
 export default {
     name: 'geotic',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.world = engine.createWorld();
 

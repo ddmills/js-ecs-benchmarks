@@ -39,6 +39,7 @@ class MovementSystem extends ApeECS.System {
 
 export default {
     name: 'ape-ecs',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.world = new ApeECS.World();
 

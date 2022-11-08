@@ -51,6 +51,7 @@ MovementSystem.queries = {
 let i = 0;
 export default {
     name: 'ecsy',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.world = new World();
 

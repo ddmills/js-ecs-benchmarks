@@ -18,6 +18,16 @@ suites.forEach((suite) => {
     const output = [];
 
     libraries.forEach((library, libIdx) => {
+        if (!library.suites.includes(suite.name)) {
+            output.push({
+                library,
+                sum: Infinity,
+                updates: 0,
+                skipped: true,
+            });
+            return;
+        }
+
         suite.setup(library);
 
         let sum = 0;
@@ -47,6 +57,7 @@ suites.forEach((suite) => {
             library,
             sum,
             updates,
+            skipped: false,
         });
 
         library.cleanup();
@@ -61,10 +72,10 @@ suites.forEach((suite) => {
         const avg = Math.round(out.sum / suite.iterations);
         const percent = (out.sum / output[0].sum) * 100 - 100;
 
-        const nameTxt = out.library.name.padEnd(12, ' ');
-        const sumTxt = `${Math.round(out.sum)}`.padStart(10, ' ') + 'ms';
-        const avgText = `${avg}`.padStart(6, ' ') + 'ms';
-        const updateText =
+        let nameTxt = out.library.name.padEnd(12, ' ');
+        let sumTxt = `${Math.round(out.sum)}`.padStart(10, ' ') + 'ms';
+        let avgText = `${avg}`.padStart(6, ' ') + 'ms';
+        let updateText =
             out.updates > 0 ? `${out.updates} updates`.padStart(20) : '';
 
         let percentText = percent.toFixed(1).padStart(10, ' ') + '%';
@@ -73,6 +84,15 @@ suites.forEach((suite) => {
             percentText += ' fastest';
         } else {
             percentText += ' slower';
+        }
+
+        if (out.skipped) {
+            sumTxt = '';
+            avgText = '';
+            updateText = '';
+            updateText = '';
+            percentText = '';
+            nameTxt = nameTxt.padEnd(44, ' ') + 'skipped';
         }
 
         console.log(

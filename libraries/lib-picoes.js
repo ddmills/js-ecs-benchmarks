@@ -26,6 +26,7 @@ class MovementSystem {
 
 export default {
     name: 'picoes',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.state = { updateCount: 0 };
         this.world = new World({

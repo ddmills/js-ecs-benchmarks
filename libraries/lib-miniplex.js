@@ -25,6 +25,7 @@ const movementSystem = (world) => {
 
 export default {
     name: 'miniplex',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.world = new World();
         this.movementSystem = movementSystem(this.world);

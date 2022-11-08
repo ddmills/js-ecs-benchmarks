@@ -4,6 +4,7 @@ const Vector2 = { x: formats.float32, y: formats.float32 };
 
 export default {
     name: 'harmony-ecs',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.updateCount = 0;
         this.world = World.make(1e6);

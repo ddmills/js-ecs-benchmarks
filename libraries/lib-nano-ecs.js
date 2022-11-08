@@ -28,6 +28,7 @@ class MovementSystem {
 
 export default {
     name: 'nano-ecs',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.world = nano();
 

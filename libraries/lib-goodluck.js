@@ -39,6 +39,7 @@ function sys_move(world) {
 
 export default {
     name: 'goodluck',
+    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
     setup() {
         this.world = new World();
     },
