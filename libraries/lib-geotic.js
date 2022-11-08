@@ -37,7 +37,7 @@ class MovementSystem {
 }
 
 export default {
-    name: 'geotic (v4)',
+    name: 'geotic',
     setup() {
         this.world = engine.createWorld();
 
