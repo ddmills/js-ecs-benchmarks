@@ -5,7 +5,6 @@ Includes:
 -   [Ape ECS](https://github.com/fritzy/ape-ecs)
 -   [bitECS](https://github.com/NateTheGreatt/bitECS)
 -   [ecsy](https://github.com/ecsyjs/ecsy)\*
--   [fastecs](https://github.com/octavetoast/fastecs)
 -   [geotic](https://github.com/ddmills/geotic)
 -   [goodluck](https://github.com/piesku/goodluck)
 -   [harmony-ecs](https://github.com/3mcd/harmony-ecs)
