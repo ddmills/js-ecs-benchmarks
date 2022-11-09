@@ -24,21 +24,22 @@ class MovementSystem {
     constructor(world) {
         this.query = world.createQuery({
             all: [Position, Velocity],
+            immutableResult: false,
         });
     }
 
     update() {
-        Array.from(this.query.get()).forEach((entity) => {
+        for (let entity of this.query.get()) {
             entity.position.x += entity.velocity.dx;
             entity.position.y += entity.velocity.dy;
             this.updateCount++;
-        });
+        };
     }
 }
 
 export default {
     name: 'geotic',
-    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
+    suites: ['Add/Remove', 'Destroy', 'Velocity'],
     setup() {
         this.world = engine.createWorld();
 

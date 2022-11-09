@@ -2,7 +2,7 @@ import { ECS, all, not, any, types as t } from 'wolf-ecs';
 
 export default {
     name: 'wolf-ecs',
-    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
+    suites: ['Add/Remove', 'Destroy', 'Velocity'],
     setup() {
         this.updateCount = 0;
         this.ecs = new ECS(1e6);

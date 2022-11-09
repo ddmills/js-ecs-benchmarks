@@ -29,7 +29,7 @@ class MovementSystem {
 
 export default {
     name: 'uecs',
-    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
+    suites: ['Add/Remove', 'Destroy', 'Velocity'],
     setup() {
         this.world = new World();
         this.movementSystem = new MovementSystem(this.world);

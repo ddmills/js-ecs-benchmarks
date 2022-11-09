@@ -14,7 +14,7 @@ let updateCount = 0;
 
 export default {
     name: 'bitecs',
-    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
+    suites: ['Add/Remove', 'Destroy', 'Velocity'],
     setup() {
         this.world = createWorld();
 

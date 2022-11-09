@@ -32,7 +32,7 @@ class MovementSystem extends ECS.System {
 
 export default {
     name: 'yagl-ecs',
-    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
+    suites: ['Add/Remove', 'Destroy', 'Velocity'],
     setup() {
         this.ecs = new ECS();
         this.movementSystem = new MovementSystem();

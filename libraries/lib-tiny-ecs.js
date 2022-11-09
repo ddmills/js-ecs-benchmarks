@@ -28,7 +28,7 @@ class MovementSystem {
 
 export default {
     name: 'tiny-ecs',
-    suites: ['Add/Remove', 'Additions', 'Destroy', 'Velocity'],
+    suites: ['Add/Remove', 'Destroy', 'Velocity'],
     setup() {
         this.world = new tiny.EntityManager();
 
