@@ -38,14 +38,10 @@ export default {
            those objects. In Typescript, you get full type checking of all your
            entities and components. TypeScript is great and you should use it! (But
            miniplex will happily work without it, too.) */
-        this.world.addComponent(entity, {
-            position: { x: 0, y: 0, z: 0 },
-        });
+        this.world.addComponent(entity, "position", { x: 0, y: 0, z: 0 });
     },
     addVelocityComponent(entity) {
-        this.world.addComponent(entity, {
-            velocity: { x: 1, y: 2, z: 3 },
-        });
+        this.world.addComponent(entity, "velocity", { x: 1, y: 2, z: 3 });
     },
     removePositionComponent(entity) {
         this.world.removeComponent(entity, 'position');

@@ -1,5 +1,5 @@
 import pkg from '@javelin/ecs';
-const { World, createWorld, createQuery, number } = pkg;
+const { createWorld, createQuery, toComponent, number } = pkg;
 
 let updateCount = 0;
 
@@ -7,9 +7,9 @@ const movementSystem = (world) => {
     let movingEntities = createQuery(Position, Velocity);
 
     /* Return the system */
-    return () => {
+    return (world) => {
         /* Now apply the velocity to the position. */
-        for (const [entities, [positions, velocities]] of movingEntities.bind(world)) {
+        for (const [entities, [positions, velocities]] of movingEntities) {
             for (let i = 0; i < entities.length; i++) {
                 positions[i].x += velocities[i].x;
                 positions[i].y += velocities[i].y;
@@ -38,16 +38,16 @@ export default {
     setup() {
         this.world = createWorld();
         this.movementSystem = movementSystem(this.world);
-        this.world.addSystem(movementSystem);
+        this.world.addSystem(this.movementSystem);
     },
     createEntity() {
         return this.world.create();
     },
     addPositionComponent(entity) {
-        this.world.attach(entity, { x: 0, y: 0, z: 0 }, Position);
+        this.world.attach(entity, toComponent({ x: 0, y: 0, z: 0 }, Position));
     },
     addVelocityComponent(entity) {
-        this.world.attach(entity, { x: 1, y: 2, z: 3 }, Velocity);
+        this.world.attach(entity, toComponent({ x: 1, y: 2, z: 3 }, Velocity));
     },
     removePositionComponent(entity) {
         this.world.detach(entity, Position);
@@ -64,7 +64,7 @@ export default {
         this.movementSystem = null;
     },
     updateMovementSystem() {
-        this.movementSystem();
+        this.world.step();
     },
     getMovementSystemUpdateCount() {
         return updateCount;
