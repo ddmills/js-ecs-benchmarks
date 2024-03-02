@@ -1,6 +1,6 @@
-import { World, Schema, Entity, Query, formats } from 'harmony-ecs';
+import { World, Schema, Entity, Query, Format } from 'harmony-ecs';
 
-const Vector2 = { x: formats.float32, y: formats.float32 };
+const Vector2 = { x: Format.float32, y: Format.float32 };
 
 export default {
     name: 'harmony-ecs',
@@ -34,7 +34,7 @@ export default {
     },
 
     destroyEntity(id) {
-        Entity.delete(this.world, id);
+        Entity.destroy(this.world, id);
     },
 
     cleanup() {

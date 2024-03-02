@@ -7,7 +7,7 @@ const movementSystem = (world) => {
 
     /* Return the system */
     return () => {
-        movingEntities ||= world.archetype('position', 'velocity');
+        movingEntities ||= world.with('position', 'velocity');
 
         /* Get the index for the archetype we created earlier. */
         const { entities } = movingEntities;
@@ -31,7 +31,7 @@ export default {
         this.movementSystem = movementSystem(this.world);
     },
     createEntity() {
-        return this.world.createEntity({});
+        return this.world.add({});
     },
     addPositionComponent(entity) {
         /* Entities are just JavaScript objects, and components just properties on
@@ -54,7 +54,7 @@ export default {
         this.world.removeComponent(entity, 'velocity');
     },
     destroyEntity(entity) {
-        this.world.destroyEntity(entity);
+        this.world.remove(entity);
     },
     cleanup() {
         updateCount = 0;
