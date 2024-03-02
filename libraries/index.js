@@ -14,4 +14,4 @@ export { default as WolfEcsLibrary } from './lib-wolf-ecs.js';
 export { default as PiecsLibrary } from './lib-piecs.js';
 export { default as HarmonyEcsLibrary } from './lib-harmony-ecs.js';
 export { default as JavelinEcsLibrary } from './lib-javelin-ecs.js';
-// export { default as EcsyLibrary } from './lib-ecsy';
+export { default as EcsyLibrary } from './lib-ecsy.js';
