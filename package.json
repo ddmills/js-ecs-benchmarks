@@ -13,25 +13,26 @@
         "url": "git+https://github.com/ddmills/js-ecs-benchmarks.git"
     },
     "dependencies": {
-        "ape-ecs": "^1.3.0",
-        "bitecs": "^0.2.14",
+        "@javelin/ecs": "^1.0.0-alpha.13",
+        "ape-ecs": "^1.3.1",
+        "bitecs": "^0.3.40",
         "ecsy": "^0.4.2",
-        "elegant-spinner": "^2.0.0",
+        "elegant-spinner": "^3.0.0",
         "geotic": "^4.3.2",
         "goodluck": "^7.0.0",
-        "harmony-ecs": "^0.0.8",
-        "log-update": "^4.0.0",
-        "miniplex": "^0.9.0",
+        "harmony-ecs": "^0.0.12",
+        "log-update": "^6.0.0",
+        "miniplex": "^2.0.0",
         "nano-ecs": "^2.4.0",
         "perform-ecs": "^0.7.8",
-        "picoes": "^1.0.0",
+        "picoes": "^1.1.1",
         "piecs": "^0.4.0",
         "tiny-ecs": "^2.0.0",
-        "uecs": "0.1.7",
-        "wolf-ecs": "^2.0.0",
+        "uecs": "0.4.2",
+        "wolf-ecs": "^2.1.3",
         "yagl-ecs": "^1.1.0"
     },
     "devDependencies": {
-        "prettier": "^2.2.1"
+        "prettier": "^3.2.5"
     }
 }

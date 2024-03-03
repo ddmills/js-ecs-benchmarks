@@ -1,5 +1,5 @@
-import * as libs from './libraries';
-import * as suts from './suites';
+import * as libs from './libraries/index.js';
+import * as suts from './suites/index.js';
 import elegantSpinner from 'elegant-spinner';
 import logUpdate from 'log-update';
 
@@ -44,8 +44,7 @@ suites.forEach((suite) => {
                 const lib = `${libIdx}/${libraries.length}`;
 
                 logUpdate(
-                    `${frame()} ${suite.name} - ${lib} ${
-                        library.name
+                    `${frame()} ${suite.name} - ${lib} ${library.name
                     } ${progress.toFixed(0)}%`
                 );
             }
